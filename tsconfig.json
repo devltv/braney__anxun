@@ -1,0 +1,7 @@
+// {
+// 	"files": ["src/scripts/main.js"],
+// 	"compilerOptions": {
+// 		"noImplicitAny": true,
+// 		"target": "ES5"
+// 	}
+// }

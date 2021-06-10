@@ -1,0 +1,111 @@
+$color: (
+	// 2 màu chủ đạo
+	primary: #1d5632,
+	secondary: #ff8300,
+	black-op: rgba(0, 0, 0, 0.151),
+	bg-primary: #fff,
+
+	// Khi background sáng
+	large: #212121, // Title lớn
+	medium: #757575, // ttile cấp 2
+	small: #9e9e9e, // chủ yếu dùng cho thẻ p
+
+	// khi background tối
+	large-light: #ffffff, // Title lớn
+	medium-light: rgba(#ffffff, .7),// ttile cấp 2
+	small-light: rgba(#ffffff, .5), // chủ yếu dùng cho thẻ p
+
+	// dùng cho thông báo lỗi
+	error: rgba(255, 0, 0, 0.658),
+	success: #4bb543,
+);
+
+$family: (
+	primary: "'Roboto', sans-serif",
+);
+
+$media: (
+	none: 0px,
+
+	// mobile small
+	ms: 320px,
+
+	// mobile medium
+	mm: 425px,
+
+	// mobile large
+	ml: 640px,
+
+	// tablet small
+	ts: 768px,
+
+	// tablet medium
+	tm: 900px,
+
+	// tablet large
+	tl: 1024px,
+
+	// personal computer small
+	ps: 1280px,
+
+	// personal computer medium
+	pm: 1440px,
+
+	// personal computer large
+	pl: 1920px,
+);
+
+$size: (
+	
+	// header device size large
+	header-large: 136px,
+	header-medium: 104px,
+	header-small: 80px,
+
+	// header scroll down 100px
+	header-scroll-large: 56px,
+	header-scroll-medium: 56px,
+	header-scroll-small: 56px,
+	
+
+	// khoang cach giua 2 section
+	margin-block-large: 104px,
+	margin-block-medium: 64px,
+	margin-block-small: 32px,
+
+	// margin-block-large:64px,
+	// margin-block-medium:32px,
+	// margin-block-small:20px,
+
+	font-h1:48pt,
+	font-h1-tl:40px,
+	font-h1-ml:32px,
+
+	font-h2:24px,
+	font-h2-tl:22px,
+	font-h2-ml:18px,
+
+	font-p1:18px,
+	font-p1-tl:16px,
+	font-p1-ml:16px,
+
+	font-p2:16px,
+	font-p2-tl:14px,
+	font-p2-ml:14px,
+
+	// font-h3:50px,
+	// font-h3-tl:36px,
+	// font-h3-ml:30px,
+
+	// font-h4:23px,
+	// font-h4-tl:22px,
+	// font-h4-ml:20px,
+	
+	// font-h5:20px,
+	// font-h5-tl:19px,
+	// font-h5-ml:18px,
+	
+	// font-h6:18px,
+	// font-h6-tl:17px,
+	// font-h6-ml:16px,
+);

@@ -1,0 +1,60 @@
+.family--primary{
+  font-family: map-get($family, primary);
+}
+
+@for $i from 1 through 2 {
+  .title-size--lv#{$i}{
+    font-size: map-get($size, 'font-h#{$i}');
+  }
+  @media (max-width: map-get($media, tl)) {
+    .title-size--lv#{$i}{
+      font-size: map-get($size, 'font-h#{$i}-tl')
+    }
+  }
+  @media (max-width: map-get($media, ml)) {
+    .title-size--lv#{$i}{
+      font-size: map-get($size, 'font-h#{$i}-ml')
+    }
+  }
+}
+
+@for $i from 1 through 2 {
+  .desc-size--lv#{$i}{
+    font-size: map-get($size, 'font-h#{$i}');
+  }
+  @media (max-width: map-get($media, tl)) {
+    .desc-size--lv#{$i}{
+      font-size: map-get($size, 'font-h#{$i}-tl')
+    }
+  }
+  @media (max-width: map-get($media, ml)) {
+    .desc-size--lv#{$i}{
+      font-size: map-get($size, 'font-h#{$i}-ml')
+    }
+  }
+}
+
+// sử dụng .title--lv1 -> lv2
+@for $i from 1 through 2{
+  .title--lv#{$i}{
+    @extend .title-size--lv#{$i};
+  }
+}
+
+// sử dụng .desc--lv1 -> lv 2
+@for $i from 1 through 2{
+  .desc--lv#{$i}{
+    @extend .desc-size--lv#{$i};
+  }
+}
+
+// overflow thẻ p từ dòng 1 -> 6
+// sử dụng .p-line-clamp--1 -> 6
+@for $i from 1 through 6{
+	.p-line-clamp--#{$i}{
+		display: -webkit-box;
+		-webkit-line-clamp: #{$i};
+		-webkit-box-orient: vertical;  
+		overflow: hidden;
+	}
+}
