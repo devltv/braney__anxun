@@ -1,6 +1,8 @@
 *,
 *::before,
 *::after {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 *:focus,
@@ -10,9 +12,7 @@
 
 html,
 body{
-	background-color: map-get($color, bg);
 	color: map-get($color, base);
-
 	font-family: map-get($family, primary), sans-serif;
 
 	line-height: 1.2;
