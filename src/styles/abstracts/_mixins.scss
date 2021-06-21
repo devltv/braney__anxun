@@ -1,0 +1,35 @@
+@mixin family--primary {
+    font-family: map-get($family, primary), sans-serif;
+}
+
+@mixin p-line-clamp ($i) {
+    display: -webkit-box;
+    -webkit-line-clamp: #{$i};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin title-size--lv ($i) {
+    font-size: map-get($size, "font-h#{$i}");
+    @media (max-width: map-get($media, tl)) {
+        font-size: map-get($size, "font-h#{$i}-tl");
+    }
+    @media (max-width: map-get($media, ml)) {
+        font-size: map-get($size, "font-h#{$i}-ml");
+    }
+}
+
+@mixin desc-size--lv($i) {
+    font-size: map-get($size, "font-h#{$i}");
+    @media (max-width: map-get($media, tl)) {
+        font-size: map-get($size, "font-h#{$i}-tl");
+    }
+    @media (max-width: map-get($media, ml)) {
+        font-size: map-get($size, "font-h#{$i}-ml");
+    }
+}
+
+
+
+// overflow thẻ p từ dòng 1 -> 6
+// sử dụng .p-line-clamp--1 -> 6

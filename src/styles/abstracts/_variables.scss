@@ -21,7 +21,7 @@ $color: (
 );
 
 $family: (
-	primary: "'Roboto', sans-serif",
+	primary: 'Roboto',
 );
 
 $media: (
@@ -55,8 +55,17 @@ $media: (
 	pl: 1920px,
 );
 
-$size: (
-	
+$space: (
+	big-l: 160px,
+	big-m: 88px,
+	big-s: 80px,
+);
+
+
+$block: (
+	header-L: 152px,
+
+
 	// header device size large
 	header-large: 136px,
 	header-medium: 104px,
@@ -66,17 +75,9 @@ $size: (
 	header-scroll-large: 56px,
 	header-scroll-medium: 56px,
 	header-scroll-small: 56px,
-	
+);
 
-	// khoang cach giua 2 section
-	margin-block-large: 104px,
-	margin-block-medium: 64px,
-	margin-block-small: 32px,
-
-	// margin-block-large:64px,
-	// margin-block-medium:32px,
-	// margin-block-small:20px,
-
+$size: (
 	font-h1:48pt,
 	font-h1-tl:40px,
 	font-h1-ml:32px,
