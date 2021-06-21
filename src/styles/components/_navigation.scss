@@ -1,0 +1,45 @@
+.nav{
+  background-color: map-get($color, bg-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 405px;
+  padding: 16px;
+
+  .nav-item + .nav-item{
+    margin-top: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px 16px;
+
+    @include nav-font;
+
+    &__img{
+      stroke: map-get($color, headlines) !important;
+    }
+    &__icon{
+      stroke: map-get($color, primary) !important;
+    }
+
+
+    &:hover{
+      color: map-get($color, headlines-hover);
+
+      svg.nav-img{
+        path{
+          stroke: map-get($color, headlines-hover) !important;
+        }
+      }
+      svg.nav-icon{
+        path{
+          stroke: map-get($color, primary-hover) !important;
+        }
+      }
+    }
+  }
+}

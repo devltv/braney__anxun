@@ -29,6 +29,65 @@
     }
 }
 
+////////////////////////////////////////////////
+// font-weight
+
+// 100 Thin
+// 200 Extra Light
+// 300 Light
+// 400 Normal
+// 500 Medium
+// 600 Semi Bold
+// 700 Bold
+// 800 Extra Bold
+// 900 Ultra Bold
+
+@mixin thin{
+    font-weight: 100;
+}
+@mixin extra-light{
+    font-weight: 200;
+}
+@mixin light{
+    font-weight: 300;
+}
+@mixin regular{
+    font-weight: 400;
+}
+@mixin normal{
+    font-weight: 400;
+}
+@mixin medium{
+    font-weight: 500;
+}
+@mixin semi-bold{
+    font-weight: 600;
+}
+@mixin bold{
+    font-weight: 700;
+}
+@mixin extra-bold{
+    font-weight: 800;
+}
+@mixin ultra-bold{
+    font-weight: 900;
+}
+@mixin uppercase{
+    text-transform: uppercase;
+}
+
+@mixin nav-font{
+    @include regular;
+    font-size: map-get($size, nav);
+    color: map-get($color, headlines);
+    text-transform: uppercase;
+}
+
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+
 
 
 // overflow thẻ p từ dòng 1 -> 6

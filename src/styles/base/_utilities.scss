@@ -11,3 +11,50 @@
       @include desc-size--lv($i);
   }
 }
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.base-font{
+  font-size: map-get($size, base);
+  font-weight: normal;
+}
+
+.nav-size{
+  font-size: map-get($size, nav);
+}
+
+.nav-font{
+  @extend .nav-size;
+  @include regular;
+  @include uppercase;
+  color: map-get($color, headlines);
+}
+
+.nav-font-more{
+  @extend .nav-size;
+  @include bold;
+  color:map-get($color, primary);
+}
+
+.headlines-color{
+  color: map-get($color, headlines);
+}
+
+.head-font-1{
+  @extend .headlines-color;
+  @include bold;
+  @include uppercase;
+  font-size: map-get(size, head-1);
+}
+.head-font-2{
+  @include semi-bold;
+  font-size: map-get(size, head-2);
+}
+
+.date-font{
+  @include regular;
+  color:map-get($color, primary);
+  font-size: map-get($size, note);
+}

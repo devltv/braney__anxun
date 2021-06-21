@@ -10,18 +10,13 @@
 
 html,
 body{
-	margin: 0;
-	// font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-	// 	"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-	// 	"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	@include family--primary;
-	@extend .desc--lv1;
-	font-weight: 500;
+	background-color: map-get($color, bg);
+	color: map-get($color, base);
+
+	font-family: map-get($family, primary), sans-serif;
+
 	line-height: 1.2;
 	letter-spacing: 1px;
-	color: map-get($color, small);
-	background-color: map-get($color, bg-primary);
-	// font-family: sans-serif;
 }
 
 img{

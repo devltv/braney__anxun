@@ -1,19 +1,22 @@
 $color: (
-	// 2 màu chủ đạo
-	primary: #1d5632,
-	secondary: #ff8300,
-	black-op: rgba(0, 0, 0, 0.151),
-	bg-primary: #fff,
+	// header
+	headlines: #00555A,
+	headlines-hover: #FFFFFF,
 
-	// Khi background sáng
-	large: #212121, // Title lớn
-	medium: #757575, // ttile cấp 2
-	small: #9e9e9e, // chủ yếu dùng cho thẻ p
+	// body text
+	base: #8D8D8D,
+	primary: #00A79D,
+	primary-hover: #FFFFFF,
 
-	// khi background tối
-	large-light: #ffffff, // Title lớn
-	medium-light: rgba(#ffffff, .7),// ttile cấp 2
-	small-light: rgba(#ffffff, .5), // chủ yếu dùng cho thẻ p
+
+	
+	bg: #FFFFFF,
+	bg-light: #F1F1F1,
+	bg-dark: #F5F5F5,
+
+	// background overlay
+	overlay: rgba(#00555A, .81),
+	overlay-banner: rgba(#00555A, .7),
 
 	// dùng cho thông báo lỗi
 	error: rgba(255, 0, 0, 0.658),
@@ -21,7 +24,7 @@ $color: (
 );
 
 $family: (
-	primary: 'Roboto',
+	primary: 'Lexend',
 );
 
 $media: (
@@ -63,36 +66,49 @@ $space: (
 
 
 $block: (
-	header-L: 152px,
+	header: 152px,
 
+	// // header device size large
+	// header-large: 136px,
+	// header-medium: 104px,
+	// header-small: 80px,
 
-	// header device size large
-	header-large: 136px,
-	header-medium: 104px,
-	header-small: 80px,
-
-	// header scroll down 100px
-	header-scroll-large: 56px,
-	header-scroll-medium: 56px,
-	header-scroll-small: 56px,
+	// // header scroll down 100px
+	// header-scroll-large: 56px,
+	// header-scroll-medium: 56px,
+	// header-scroll-small: 56px,
 );
 
 $size: (
-	font-h1:48pt,
-	font-h1-tl:40px,
-	font-h1-ml:32px,
+	base: 16px,
 
-	font-h2:24px,
-	font-h2-tl:22px,
-	font-h2-ml:18px,
+	head-1: 42px,
+	head-2: 24px,
+	
+	nav: 18px,
 
-	font-p1:18px,
-	font-p1-tl:16px,
-	font-p1-ml:16px,
+	banner-tilte: 60px,
+	banner-text: 20px,
 
-	font-p2:16px,
-	font-p2-tl:14px,
-	font-p2-ml:14px,
+	// note text
+	note: 14px,
+
+
+	// font-h1:48pt,
+	// font-h1-tl:40px,
+	// font-h1-ml:32px,
+
+	// font-h2:24px,
+	// font-h2-tl:22px,
+	// font-h2-ml:18px,
+
+	// font-p1:18px,
+	// font-p1-tl:16px,
+	// font-p1-ml:16px,
+
+	// font-p2:16px,
+	// font-p2-tl:14px,
+	// font-p2-ml:14px,
 
 	// font-h3:50px,
 	// font-h3-tl:36px,
