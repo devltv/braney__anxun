@@ -1,16 +1,16 @@
-// sử dụng .title--lv1 -> lv2
-@for $i from 1 through 2 {
-  .title--lv#{$i} {
-      @include title-size--lv($i);
-  }
-}
+// // sử dụng .title--lv1 -> lv2
+// @for $i from 1 through 2 {
+//   .title--lv#{$i} {
+//       @include title-size--lv($i);
+//   }
+// }
 
-// sử dụng .desc--lv1 -> lv 2
-@for $i from 1 through 2 {
-  .desc--lv#{$i} {
-      @include desc-size--lv($i);
-  }
-}
+// // sử dụng .desc--lv1 -> lv 2
+// @for $i from 1 through 2 {
+//   .desc--lv#{$i} {
+//       @include desc-size--lv($i);
+//   }
+// }
 
 .uppercase{
   text-transform: uppercase;
@@ -46,11 +46,11 @@
   @extend .headlines-color;
   @include bold;
   @include uppercase;
-  font-size: map-get(size, head-1);
+  font-size: map-get($size, head-1);
 }
 .head-font-2{
   @include semi-bold;
-  font-size: map-get(size, head-2);
+  font-size: map-get($size, head-2);
 }
 
 .date-font{

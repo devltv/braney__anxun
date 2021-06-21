@@ -3,10 +3,11 @@ extends _templates/_layout/_layout.pug
 block var
 	- let title = 'Page | Index';
 	- let bodyClass = 'index-page';
+	- let indexCheck = true;
 
 //- block loading
 //- 	include _templates/_layout/_loading
-block banner,breadcrumb
+//- block banner,breadcrumb
 block main
 	div(id="indexPage")
 		include _templates/index/i-1
