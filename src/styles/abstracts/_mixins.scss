@@ -9,25 +9,25 @@
     overflow: hidden;
 }
 
-@mixin title-size--lv ($i) {
-    font-size: map-get($size, "font-h#{$i}");
-    @media (max-width: map-get($media, tl)) {
-        font-size: map-get($size, "font-h#{$i}-tl");
-    }
-    @media (max-width: map-get($media, ml)) {
-        font-size: map-get($size, "font-h#{$i}-ml");
-    }
-}
+// @mixin title-size--lv ($i) {
+//     font-size: map-get($size, "font-h#{$i}");
+//     @media (max-width: map-get($media, tl)) {
+//         font-size: map-get($size, "font-h#{$i}-tl");
+//     }
+//     @media (max-width: map-get($media, ml)) {
+//         font-size: map-get($size, "font-h#{$i}-ml");
+//     }
+// }
 
-@mixin desc-size--lv($i) {
-    font-size: map-get($size, "font-h#{$i}");
-    @media (max-width: map-get($media, tl)) {
-        font-size: map-get($size, "font-h#{$i}-tl");
-    }
-    @media (max-width: map-get($media, ml)) {
-        font-size: map-get($size, "font-h#{$i}-ml");
-    }
-}
+// @mixin desc-size--lv($i) {
+//     font-size: map-get($size, "font-h#{$i}");
+//     @media (max-width: map-get($media, tl)) {
+//         font-size: map-get($size, "font-h#{$i}-tl");
+//     }
+//     @media (max-width: map-get($media, ml)) {
+//         font-size: map-get($size, "font-h#{$i}-ml");
+//     }
+// }
 
 ////////////////////////////////////////////////
 // font-weight
@@ -87,8 +87,239 @@
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 
+///////////////////////////////////////////////
+///////////// FONT SIZE ////////////////////////
+
+@mixin sizeBase{
+    font-size: map-get($size, base);
+    line-height: map-get($size, line-base);
+    @media (max-width: map-get($media, tl)) {
+        font-size: map-get($size, base-tl);
+        line-height: map-get($size, line-base-tl);
+    }
+    // @media (max-width: map-get($media, ts)) {
+    //     font-size: map-get($size, base-ts);
+    //     line-height: map-get($size, line-base-ts);
+    // }
+}
+@mixin sizeBannerTitle{
+    font-size: map-get($size, banner-title);
+    line-height: map-get($size, line-banner-title);
+    @media (max-width: map-get($media, ps)) {
+        font-size: map-get($size, banner-title-ps);
+        line-height: map-get($size, line-banner-title-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        font-size: map-get($size, banner-title-ts);
+        line-height: map-get($size, line-banner-title-ts);
+    }
+}
+
+@mixin sizeBannerText{
+    font-size: map-get($size, banner-text);
+    line-height: map-get($size, line-banner-text);
+    @media (max-width: map-get($media, ps)) {
+        font-size: map-get($size, banner-text-ps);
+        line-height: map-get($size, line-banner-text-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        font-size: map-get($size, banner-text-ts);
+        line-height: map-get($size, line-banner-text-ts);
+    }
+}
+
+@mixin lineText{
+    line-height: map-get($size, line-text);
+    @media (max-width: map-get($media, ps)) {
+        line-height: map-get($size, line-text-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        line-height: map-get($size, line-text-ts);
+    }
+}
+
+@mixin lineHead-1{
+    line-height: map-get($size, line-head-1);
+    @media (max-width: map-get($media, ps)) {
+        line-height: map-get($size, line-head-1-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        line-height: map-get($size, line-head-1-ts);
+    }
+}
+
+@mixin sizeHeadlines-1{
+    font-size: map-get($size, head-1);
+    @media (max-width: map-get($media, ps)) {
+        font-size: map-get($size, head-1-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        font-size: map-get($size, head-1-ts);
+    }
+}
+
+@mixin sizeHeadlines-2{
+    font-size: map-get($size, head-2);
+    @media (max-width: map-get($media, ps)) {
+        font-size: map-get($size, head-2-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        font-size: map-get($size, head-2-ts);
+    }
+}
 
 
+///////////// BLOCK ///////////////////////
+
+@mixin heightHeader{
+    height: map-get($block, header);
+
+    @media (max-width: map-get($media, ps)) {
+        height: map-get($block, header-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        height: map-get($block, header-ts);
+    }
+}
+  
+  
+@mixin heightBanner{
+    height: map-get($block, banner);
+
+    @media (max-width: map-get($media, ps)) {
+        height: map-get($block, banner-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        height: map-get($block, banner-ts);
+    }
+}
+
+@mixin pathBanner($name){
+    #{$name}: map-get($block, banner-path);
+
+    @media (max-width: map-get($media, ps)) {
+        #{$name}: map-get($block, banner-path-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        #{$name}: map-get($block, banner-path-ts);
+    }
+}
+
+@mixin blockPath($name){
+    #{$name}: map-get($block, path);
+
+    @media (max-width: map-get($media, ps)) {
+        #{$name}: map-get($block, path-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        #{$name}: map-get($block, path-ts);
+    }
+}
+
+////////////////////////////////////////////////////////\
+////////////////////////// SPACE /////////////////////////
+@mixin spaceUltraBig($name, $value: -1px){
+	@if ($value != -1px){
+		#{$name}: map-get($space, ultra-big) $value;
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, ultra-big-ps) $value;
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, ultra-big-ts) $value;
+		}
+	}
+	@else{
+		#{$name}: map-get($space, ultra-big);
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, ultra-big-ps);
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, ultra-big-ts);
+		}
+	}
+}
+
+@mixin spaceMedium($name, $value: -1px){
+	@if ($value != -1px){
+		#{$name}: map-get($space, smedium) $value;
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, smedium-ps) $value;
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, smedium-ts) $value;
+		}
+	}
+	@else{
+		#{$name}: map-get($space, smedium);
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, smedium-ps);
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, smedium-ts);
+		}
+	}
+}
+
+@mixin spaceExtraMedium($name, $value: -1px){
+	@if ($value != -1px){
+		#{$name}: map-get($space, extra-medium) $value;
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, extra-medium-ps) $value;
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, extra-medium-ts) $value;
+		}
+	}
+	@else{
+		#{$name}: map-get($space, extra-medium);
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, extra-medium-ps);
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, extra-medium-ts);
+		}
+	}
+}
+@mixin spaceSemiMedium($name, $value: -1px){
+	@if ($value != -1px){
+		#{$name}: map-get($space, semi-medium) $value;
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, semi-medium-ps) $value;
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, semi-medium-ts) $value;
+		}
+	}
+	@else{
+		#{$name}: map-get($space, semi-medium);
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, semi-medium-ps);
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, semi-medium-ts);
+		}
+	}
+}
+@mixin spaceNormal($name, $value: -1px){
+	@if ($value != -1px){
+		#{$name}: map-get($space, snormal) $value;
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, snormal-ps) $value;
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, snormal-ts) $value;
+		}
+	}
+	@else{
+		#{$name}: map-get($space, snormal);
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, snormal-ps);
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, snormal-ts);
+		}
+	}
+}
 
 // overflow thẻ p từ dòng 1 -> 6
 // sử dụng .p-line-clamp--1 -> 6

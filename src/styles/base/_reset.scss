@@ -12,11 +12,12 @@
 
 html,
 body{
-	color: map-get($color, base);
 	font-family: map-get($family, primary), sans-serif;
-
-	line-height: 1.2;
-	letter-spacing: 1px;
+	
+	// line-height: 1.2;
+	color: map-get($color, base);
+	// font-size: map-get($size, base);
+	@include sizeBase;
 }
 
 img{

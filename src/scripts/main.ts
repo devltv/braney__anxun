@@ -1,4 +1,4 @@
-import Axios from "axios";
+// import Axios from "axios";
 declare var Swiper:any;
 
 // Commom function 
@@ -6,6 +6,7 @@ declare var Swiper:any;
 
 // Layout
 import header from "./layout/header";
+import breadcrumb from "./layout/breadcrumb";
 
 
 // Page
@@ -15,14 +16,13 @@ import index from "./page/index";
 // function Layout
 function layout(){
   header.header();
-
+  breadcrumb.breadcrumb();
 }
 
 
 // function Page
 function page(){
   index.index();
-
 }
 
 document.addEventListener("DOMContentLoaded", async () => {

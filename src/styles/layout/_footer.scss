@@ -1,0 +1,159 @@
+.footer__wrapper{
+  min-height: map-get($block, footer);
+  .footer{
+      min-height: map-get($block, footer);
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        background-color: map-get($color, footerlay);
+      }
+
+      &__top{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-basis: 30%;
+
+
+          &--address{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              min-height: 216px;
+              width: 376px;
+              background-color: map-get($color, bg );
+              border: 1px solid white;
+              margin: 0px 18px;
+              box-sizing: border-box;
+              border-bottom-right-radius: 20px ;
+              border-bottom-left-radius: 20px ;
+              position: relative;
+
+              box-shadow: 0 3px 6px rgba(0,0,0,.16);
+              z-index: 1;
+              
+              .footer--desc{
+                  width: 85%;
+                  text-align: center;
+              }
+          }
+          &-box{
+              line-height: 30px;
+          }
+          &--tel{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              min-height: 216px;
+              width: 376px;
+              background-color: map-get($color, bg );
+              border: 1px solid white;
+              margin: 0px 18px;
+              border-bottom-right-radius: 20px ;
+              border-bottom-left-radius: 20px ;
+              position: relative;
+              
+              box-shadow: 0 3px 6px rgba(0,0,0,.16);
+              z-index: 1;
+          }
+          &--email{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 376px;
+              min-height: 216px;
+              background-color: map-get($color, bg );
+              border: 1px solid white;
+              margin: 0px 18px;   
+              border-bottom-right-radius: 20px ;
+              border-bottom-left-radius: 20px ;
+              position: relative;
+              
+              box-shadow: 0 3px 6px rgba(0,0,0,.16);
+              z-index: 1;
+          }
+
+          &--address, &--email, &--tel{
+            &::after {
+              min-width: map-get($block, footer-shape );
+              position: absolute;
+              content: "";
+              top: -5%;
+              left: 50%;
+              height: 16px;
+              background: map-get($color, primary );
+              transform: translateX(-50%);
+              
+              border-radius: 8px;
+            }
+          }
+
+
+          &--desc{
+              line-height: 30px;
+          }
+          .footer__btn{
+              width: 64px;
+              height: 64px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              border-radius: 40px;
+              background-color: map-get($color, primary );
+              position:absolute;
+              top: -3%;
+              right: 7%;
+              .footer--img{
+                  width: 25px;
+                  height: 12px;
+              }
+          }
+      }
+      &__bottom{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          .logo{
+              width: 295px;
+              margin: 36px 0px;
+              height: map-get($block, logo-footer-h);
+          }
+          .icons{
+              display: flex;
+              &__footer{
+                  max-width: 30px;
+                  max-height: 25px;
+                  margin: 5px 18px;
+              }
+          }
+          &--note{
+              line-height: 23px;
+              margin: 36px 0px;
+              position: relative;
+              padding-top: 28px;
+              &::after {
+                  width: 100%;
+                  position: absolute;
+                  content: "";
+                  top: 0%;
+                  left: 50%;
+                  height: 1px;
+                  background: map-get($color, gh);
+                  transform: translateX(-50%);
+              }
+          }
+      }
+  }
+}

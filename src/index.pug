@@ -2,8 +2,10 @@ extends _templates/_layout/_layout.pug
 
 block var
 	- let title = 'Page | Index';
-	- let bodyClass = 'index-page';
-	- let indexCheck = true;
+	- let bodyClass = 'index-page'; 
+	- let titleBanner = "Lorem ipsum dolor sit amet";
+	- let textBanner = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
+	- let breadcrumbs = ["Tiện ích", "INCOTERMS 2000"];
 
 //- block loading
 //- 	include _templates/_layout/_loading
@@ -11,5 +13,7 @@ block var
 block main
 	div(id="indexPage")
 		include _templates/index/i-1
+		include _templates/index/i-2
+		include _templates/index/i-3
 
 block scripts

@@ -8,7 +8,12 @@ $color: (
 	primary: #00A79D,
 	primary-hover: #FFFFFF,
 
-
+	//footer
+	footerlay: rgba(#00555A, .81),
+	footerlines: #00555A,
+	footer-2:#8D8D8D,
+	gh:#FFFFFF,
+	footer-note:#FFFFFF,
 	
 	bg: #FFFFFF,
 	bg-light: #F1F1F1,
@@ -28,101 +33,150 @@ $family: (
 );
 
 $media: (
-	none: 0px,
-
-	// mobile small
-	ms: 320px,
-
-	// mobile medium
-	mm: 425px,
-
-	// mobile large
-	ml: 640px,
-
-	// tablet small
-	ts: 768px,
-
-	// tablet medium
-	tm: 900px,
-
-	// tablet large
-	tl: 1024px,
-
-	// personal computer small
-	ps: 1280px,
+	// personal computer large
+	pl: 1920px,
 
 	// personal computer medium
 	pm: 1440px,
 
-	// personal computer large
-	pl: 1920px,
+	// personal computer small
+	ps: 1280px,
+
+	// tablet large
+	tl: 1024px,
+	// tablet medium
+	tm: 900px,
+
+	// tablet small
+	ts: 768px,
+
+	// mobile large
+	mx: 640px,
+
+	ml: 544px,
+
+	// mobile medium
+	mm: 425px,
+
+	// mobile small
+	ms: 320px,
+
+	none: 0px,
 );
 
 $space: (
-	big-l: 160px,
-	big-m: 88px,
-	big-s: 80px,
+	// breadcrumb
+	ultra-big: 160px,
+	ultra-big-ps: 88px,
+	ultra-big-ts: 64px,
+
+	extra-big: 86px,
+	// extra-big: 86px,
+
+	// breadcrumb
+	smedium: 56px,
+	smedium-ps: 48px,
+	smedium-ts: 40px,
+
+	extra-medium: 48px,
+	extra-medium-ps: 36px,
+	extra-medium-ts: 32px,
+
+	semi-medium: 32px,
+
+	snormal: 16px,
+	snormal-ps: 14px,
+	snormal-ts: 12px,
 );
 
 
 $block: (
+	logo-header-h:68px,
+	logo-footer-h:96px,
+	nav-sub-w:416px,
+	nav-sub-h:392px,
+	footer-shape:132px,
+	
+	footer: 550px,
+	// header
 	header: 152px,
+	header-ps: 96px,
+	header-ts: 64px,
 
-	// // header device size large
-	// header-large: 136px,
-	// header-medium: 104px,
-	// header-small: 80px,
+	// banner
+	banner: 648px,
+	banner-ps: 576px,
+	banner-ts: 544px,
 
-	// // header scroll down 100px
-	// header-scroll-large: 56px,
-	// header-scroll-medium: 56px,
-	// header-scroll-small: 56px,
+	// banner
+	banner-path: 38px,
+	banner-path-ps: 32px,
+	banner-path-ts: 24px,
+
+	path: 32px,
+	path-ps: 28px,
+	path-ts: 24px,
+
+	// height-box-service: 464px,
+	// height-box-service-ps: 464px,
+	// height-box-service-ts: 464px,
+
+	height-img__box-service: 100px,
+	height-img__box-service-pm: 80px,
+	height-img__box-service-ps: 150px,
+	height-img__box-service-ts: 100px,
+	height-img__box-service-mx: 200px,
+	height-img__box-service-ml: 136px,
+	height-img__box-service-mm: 100px,
+	height-img__box-service-ms: 80px,
 );
 
 $size: (
 	base: 16px,
+	base-tl: 15px,
+
+	lineBase: 25px,
+	lineBase-tl: 23px,
 
 	head-1: 42px,
+	head-1-ps: 36px,
+	head-1-ts: 32px,
+
+	foot: 24px,
+	foot-2:18px,
+
+	line-head-1: 72px,
+	line-head-1-ps: 64px,
+	line-head-1-ts: 52px,
+	
 	head-2: 24px,
+	head-2-tl: 22px,
+	head-2-ts: 20px,
 	
 	nav: 18px,
+	nav-sub: 14px,
 
-	banner-tilte: 60px,
+	// banner
+	banner-title: 60px,
+	line-banner-title: 80px,
+	banner-title-ps: 48px,
+	line-banner-title-ps: 64px,
+	banner-title-ts: 32px,	
+	line-banner-title-ts: 40px,
+
+	// banner
 	banner-text: 20px,
+	banner-text-ps: 19px,
+	banner-text-ts: 18px,
+
+	line-text: 30px,
+	line-text-ps: 28px,
+	line-text-ts: 24px,
 
 	// note text
 	note: 14px,
 
+	// breadcrumb
+	breadcrumb: 14px,
 
-	// font-h1:48pt,
-	// font-h1-tl:40px,
-	// font-h1-ml:32px,
-
-	// font-h2:24px,
-	// font-h2-tl:22px,
-	// font-h2-ml:18px,
-
-	// font-p1:18px,
-	// font-p1-tl:16px,
-	// font-p1-ml:16px,
-
-	// font-p2:16px,
-	// font-p2-tl:14px,
-	// font-p2-ml:14px,
-
-	// font-h3:50px,
-	// font-h3-tl:36px,
-	// font-h3-ml:30px,
-
-	// font-h4:23px,
-	// font-h4-tl:22px,
-	// font-h4-ml:20px,
-	
-	// font-h5:20px,
-	// font-h5-tl:19px,
-	// font-h5-ml:18px,
-	
-	// font-h6:18px,
-	// font-h6-tl:17px,
-	// font-h6-ml:16px,
 );

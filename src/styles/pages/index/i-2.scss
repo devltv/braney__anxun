@@ -1,0 +1,141 @@
+.index-service{
+  position: relative;
+  &--padding{
+    padding: 32px 0;
+  }
+  
+  &-list{
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    // flex-wrap: wrap;
+    // z-index: 1;
+    // padding-left: 23px;
+
+    background-color: map-get($color, bg-light);
+    list-style-type: none;
+    
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+
+  &-item{
+    // padding: 23px 23px 0 0;
+    // z-index: 1;
+    
+    .box{
+      @media (max-width: map-get($media, ps)){
+        max-width: 640px;
+        // min-height: 640px;
+      }
+
+      margin: auto;
+
+      display: block;
+      // height: 464px;
+      // max-height: 464px;
+      background-color: map-get($color, bg);
+
+      // padding: 32px;
+      @include blockPath(padding);
+      border-radius: 40px;
+      box-shadow: 0 3px 6px rgba(0,0,0,.16);
+
+  
+      &-content{
+        &__title{
+          @include p-line-clamp(2);
+          @include spaceNormal(margin-bottom);
+
+          min-height: 56px;
+          @media (max-width: map-get($media, tl)) {
+            min-height: 48px;
+          }
+          
+          &--size{
+            @include sizeHeadlines-2;
+            @include lineText;
+            @include semi-bold;
+            color: map-get($color, headlines);
+            // line-height: 30px;
+            // font-size: 24px;
+            // @include line-text;
+          }
+        }
+        &__desc{
+          @include p-line-clamp(7);
+          
+          color: map-get($color, base);
+          @include sizeBase;
+          min-height: 141px;
+          @media (max-width: map-get($media, tl)) {
+            min-height: 132px;
+          }
+
+          ul{
+            list-style-type:disc;
+            padding-left: 24px;
+          }
+        }
+      }
+      &-bottom{
+        @include spaceNormal(margin-top);
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+
+        overflow: hidden;
+
+
+        // max-height: map-get($block, height-img__box-service);
+        // @media (max-width: map-get($media, pm)){
+        //   max-height: map-get($block, height-img__box-service-pm);
+        // }
+        // @media (max-width: map-get($media, ts)){
+        //   max-height: map-get($block, height-img__box-service-ts);
+        // }
+        
+        &__more{
+          height: 100%;
+          min-width: 120px;
+          margin-top: 16px;
+        }
+        &__img{
+          height: 100%;
+          flex: 1;
+          &--src{
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+
+
+            height: map-get($block, height-img__box-service);
+            @media (max-width: map-get($media, pm)){
+              height: map-get($block, height-img__box-service-pm);
+            }
+            @media (max-width: map-get($media, ps)){
+              height: map-get($block, height-img__box-service-ps);
+            }
+            @media (max-width: map-get($media, ts)){
+              height: map-get($block, height-img__box-service-ts);
+            }
+            @media (max-width: map-get($media, mx)){
+              height: map-get($block, height-img__box-service-mx);
+            }
+            @media (max-width: map-get($media, ml)){
+              height: map-get($block, height-img__box-service-ml);
+            }
+            @media (max-width: map-get($media, mm)){
+              height: map-get($block, height-img__box-service-mm);
+            }
+            @media (max-width: map-get($media, ms)){
+              height: map-get($block, height-img__box-service-ms);
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

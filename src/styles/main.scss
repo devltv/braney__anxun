@@ -9,17 +9,24 @@
 @import "base/global";
 @import "base/reset";
 
+// Component
+// @import "components/tab";
+// @import "components/loading";
+// @import "components/fullpage";
+@import "components/buttons";
+@import "components/section-path";
+
+
+// Layout
 @import "layout/grid";
 @import "layout/header";
 @import "layout/banner";
+@import "layout/breadcrumb";
 @import "layout/footer";
 @import "layout/navigation";
 @import "layout/sidebar";
 @import "layout/forms";
 
-@import "components/buttons";
-// @import "components/tab";
-@import "components/loading";
-@import "components/fullpage";
 
-@import "pages/index";
+// Page
+@import "pages/index/style";

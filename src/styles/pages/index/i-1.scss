@@ -1,0 +1,109 @@
+.index-introduct{
+  @include spaceUltraBig(padding-top);
+  @include spaceUltraBig(padding-bottom);
+
+  &--flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media(max-width: map-get($media, tl)){
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__title{
+    flex: 0 0 40%;
+    max-width: 40%;
+
+    @media(max-width: map-get($media, tl)){
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    // padding-right: 48px;
+    @include spaceExtraMedium(padding-right);
+    @media (max-width: 1366px){
+      padding-right: 36px;
+    }
+    @media(max-width: map-get($media, tl)){
+      padding-right: 0;
+    }
+
+    &--size{
+      @include sizeHeadlines-1;
+      @include lineHead-1;
+
+      color: map-get($color, overlay-banner);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-left: 100%;
+      
+      @media(max-width: map-get($media, tl)){
+        display: block;
+        justify-content: initial;
+      }
+      // width: 60%;
+      // float: right;
+      
+      // line-height: 72px;
+
+      margin-top: -12px;
+      margin-bottom: -12px;
+
+      @media (max-width: map-get($media, ps)){
+        padding-left: 0%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      
+      position: relative;
+
+      &::before{
+        content: "";
+        position: absolute;
+        top: calc( #{map-get($size, line-head-1)} / 2);
+        @media (max-width: map-get($media, ps)){
+          top: calc( #{map-get($size, line-head-1-ps)} / 2);
+        }
+        @media (max-width: map-get($media, ts)){
+          top: calc( #{map-get($size, line-head-1-ts)} / 2);
+        }
+        transform: translateY(-50%);
+        left: 0;
+        width: 20%;
+        height: 5px;
+        background-color: map-get($color, primary);
+        z-index: -1;
+
+        @media (max-width: map-get($media, pm)) {
+          width: 13%;
+        }
+        @media (max-width: 1366px){
+          width: 8%;
+        }
+        @media (max-width: map-get($media, ps)){
+          width: 0%;
+        }
+      }
+    }
+  }
+  &__desc{
+    flex: 0 0 60%;
+    max-width: 60%;
+
+    @media(max-width: map-get($media, tl)){
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    line-height: 30px;
+    
+    padding-right: 48px;
+    @media (max-width: 1366px){
+      padding-right: 0px;
+    }
+  }
+}
