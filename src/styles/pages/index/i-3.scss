@@ -8,6 +8,13 @@
   }
 
   &__slider{
+    @media (max-width: map-get($media, ps)) {
+      margin: 48px;
+    }
+    @media (max-width: map-get($media, tl)) {
+      margin: 72px;
+    }
+
     & .news-box{
       box-shadow: 0 3px 6px rgba(0,0,0,.16);
       margin-bottom: 6px;
@@ -15,6 +22,23 @@
       &__img{
         max-width: 100%;
         height: 340px;
+      
+        
+        @media (max-width: map-get($media, pm)) {
+          height: 220px;
+        }
+        @media (max-width: map-get($media, ts)) {
+          height: 220px;
+        }
+        @media (max-width: map-get($media, ml)) {
+          height: 340px;
+        }
+        @media (max-width: 520px){
+          height: 280px;
+        }
+        @media (max-width: map-get($media, mm)){
+          height: 220px;
+        }
       }
     
       &__content{

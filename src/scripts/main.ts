@@ -1,7 +1,7 @@
 // import Axios from "axios";
 declare var Swiper:any;
 
-// Commom function 
+// Common function 
 
 
 // Layout

@@ -35,7 +35,7 @@ function index3(){
 
 
       new Swiper(".index-news--swiper", {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 42,
         // slidesPerGroup: 3,
         loop: true,
@@ -48,6 +48,24 @@ function index3(){
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        breakpoints:{
+          640:{
+            slidesPerView: 2,
+            spaceBetween: 24,
+          },
+          768:{
+            slidesPerView: 2,
+            spaceBetween: 36,
+          },
+          1028:{
+            slidesPerView: 2,
+            spaceBetween: 42,
+          },
+          1280:{
+            slidesPerView: 3,
+            spaceBetween: 42,
+          }
+        }
       });
     })
   }

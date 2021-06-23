@@ -1,0 +1,21 @@
+section.index-4 
+  .index-require 
+    .index-require__img.overlay-section
+      img.index-require__img-src(src="./assets/images/index-require.jpg" alt="require")
+    .index-require__content
+      .container
+        p.index-require__content-subtitle Cần vận chuyển trên toàn thế giới?
+        h3.index-require__content-title.uppercase TƯ VẤN MIỄN PHÍ
+
+    .index-require__form
+      .form-container.container
+        form.form(action="" method="POST")
+          .form-group 
+            input.form-input(type="text" name="name" placeholder="Họ và tên") 
+          .form-group 
+            input.form-input(type="text" name="email" placeholder="Email")
+            input.form-input(type="text" name="phone" placeholder="Số điện thoại")
+          .form-group 
+            textarea.form-textarea(name="content" placeholder="Nội dung")
+          .form-group 
+            button.button-submit(name="submit" type="submit") Gửi thông tin

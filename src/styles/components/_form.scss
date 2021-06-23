@@ -1,5 +1,103 @@
-form.form{
+.form{
     .form-group + .form-group{
-        margin-top: 12px;
-    }    
+        input, textarea{
+            // margin-top: 18px;
+            @include spaceExtraNormal(margin-top);
+        }
+    }
+    display: flex;
+    flex-direction: column;
+
+    // padding: 90px;
+    @include spaceExtraBig(padding);
+    @media (max-width: map-get($media, ml)){
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    width: 100%;
+
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+
+    background-color: map-get($color, bg);
+
+    input, textarea, button{
+        border: none;
+        outline: none;
+        background: transparent;
+
+        background-color: map-get($color, bg-input);
+        border-radius: 10px;
+
+        padding: 0 28px;
+
+        color: map-get($color, base);
+
+        @include sizeBase;
+
+    }
+
+
+    button[type="submit"]{
+        padding: 0;
+        width: 240px;
+        height: 72px;
+        background-color: #00A79D;
+        @include sizeHeadlines-2;
+        @include semi-bold;
+        color: map-get($color, headlines);
+
+        // margin-top: 48px;
+        @include spaceExtraMedium(margin-top);
+
+        @media(max-width: map-get($media, ml)){
+            width: 100%;
+        }
+    }
+
+    textarea{
+        padding-top: 24px ;
+        padding-bottom: 24px ;
+    }
+
+    input{
+        height: 72px;
+    }
+
+    textarea{
+        height: 144px;
+        resize: none;
+    }
+
+    &-input, &-textarea, &-submit, &-button{
+        width: 100%;
+    }
+
+    &-group{
+        display: flex;
+        flex-wrap: wrap;
+
+        input[name="email"]{
+            width: calc(60% - 18px);
+            flex: 0 0 calc(60% - 18px);
+    
+            margin-right: 18px;
+        }
+
+        input[name="phone"]{
+            width: 40%;
+            flex: 0 0 40%;
+        }
+
+        @media (max-width: map-get($media, ts)){
+            input[name="email"],
+            input[name="phone"]{
+                width: 100%;
+                flex: 0 0 100%;
+                margin-right: 0;
+            }
+        }
+    }
+
 }

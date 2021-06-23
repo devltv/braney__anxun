@@ -106,11 +106,19 @@
   color: map-get($color, primary);
 }
 
-.title-commom{
+.title-common{
   @include sizeHeadlines-1;
   line-height: 53px;
   display: inline-block;
+
   min-width: 367px;
+  @media (max-width: map-get($media, ps)){
+    min-width: 320px;
+  }
+  @media (max-width: map-get($media, ts)){
+    min-width: 260px;
+  }
+
   padding-right: 24px;
   padding-left: 24px;
   color: map-get($color, headlines);
@@ -149,6 +157,23 @@
     width: 46px;
     height: 46px;
 
+    @media (max-width: map-get($media, tl)) {
+      width: 36px;
+      height: 36px;
+      svg{
+        width: 21px;
+        height: 14px;
+      }
+    }
+    @media (max-width: map-get($media, ml)) {
+      width: 24px;
+      height: 24px;
+      svg{
+        width: 17px;
+        height: 12px;
+      }
+    }
+
     border-radius: 50%;
     
     background-color: map-get($color, primary);
@@ -161,10 +186,41 @@
   &--before{
     left: calc(-70px - 46px);
     right: auto;
+
+    @media (max-width: 1660px){
+      left: calc(-32px - 46px);
+    }
+    @media (max-width: 1480px){
+      left: calc(-24px - 46px);
+    }
+    @media (max-width: 1440px){
+      left: calc(-32px - 46px);
+    }
+    @media (max-width: 1280px){
+      left: calc(-16px - 46px);
+    }
+    @media (max-width: 768px){
+      left: calc(-8px - 46px);
+    }
   }
   &--after{
     left: auto;
     right: calc(-70px - 46px);
+    @media (max-width: 1660px){
+      right: calc(-32px - 46px);
+    }
+    @media (max-width: 1480px){
+      right: calc(-24px - 46px);
+    }
+    @media (max-width: 1440px){
+      right: calc(-32px - 46px);
+    }
+    @media (max-width: 1280px){
+      right: calc(-16px - 46px);
+    }
+    @media (max-width: 768px){
+      right: calc(-8px - 46px);
+    }
   }
 
   // ẩn button cần thay thế

@@ -215,6 +215,16 @@
         #{$name}: map-get($block, path-ts);
     }
 }
+@mixin heightRequire($name){
+    #{$name}: map-get($block, height-img__require);
+
+    @media (max-width: map-get($media, ps)) {
+        #{$name}: map-get($block, height-img__require-ps);
+    }
+    @media (max-width: map-get($media, ts)) {
+        #{$name}: map-get($block, height-img__require-ts);
+    }
+}
 
 ////////////////////////////////////////////////////////\
 ////////////////////////// SPACE /////////////////////////
@@ -235,6 +245,27 @@
 		}
 		@media (max-width: map-get($media, ts)){
 			#{$name}: map-get($space, ultra-big-ts);
+		}
+	}
+}
+
+@mixin spaceExtraBig($name, $value: -1px){
+	@if ($value != -1px){
+		#{$name}: map-get($space, extra-big) $value;
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, extra-big-ps) $value;
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, extra-big-ts) $value;
+		}
+	}
+	@else{
+		#{$name}: map-get($space, extra-big);
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, extra-big-ps);
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, extra-big-ts);
 		}
 	}
 }
@@ -297,6 +328,26 @@
 		}
 		@media (max-width: map-get($media, ts)){
 			#{$name}: map-get($space, semi-medium-ts);
+		}
+	}
+}
+@mixin spaceExtraNormal($name, $value: -1px){
+	@if ($value != -1px){
+		#{$name}: map-get($space, extra-normal) $value;
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, extra-normal-ps) $value;
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, extra-normal-ts) $value;
+		}
+	}
+	@else{
+		#{$name}: map-get($space, extra-normal);
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, extra-normal-ps);
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, extra-normal-ts);
 		}
 	}
 }

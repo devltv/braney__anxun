@@ -1,8 +1,11 @@
+- var attributes = {};
+- attributes.src = imgBanner;
+
 section#banner
   .banner
     .banner--overlay
     .banner-img 
-      img(src="./assets/images/banner.jpg" alt="banner")
+      img(src="#{imgBanner}" alt="banner")&attributes(attributes)
     .banner-content.overlay.container
       .banner-content__title
         h2.banner-content__title--size.uppercase #{titleBanner} 

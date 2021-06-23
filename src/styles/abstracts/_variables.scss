@@ -18,6 +18,7 @@ $color: (
 	bg: #FFFFFF,
 	bg-light: #F1F1F1,
 	bg-dark: #F5F5F5,
+	bg-input: #F5F5F5,
 
 	// background overlay
 	overlay: rgba(#00555A, .81),
@@ -71,6 +72,8 @@ $space: (
 	ultra-big-ts: 64px,
 
 	extra-big: 86px,
+	extra-big-ps: 64px,
+	extra-big-ts: 56px,
 	// extra-big: 86px,
 
 	// breadcrumb
@@ -83,6 +86,10 @@ $space: (
 	extra-medium-ts: 32px,
 
 	semi-medium: 32px,
+
+	extra-normal: 18px,
+	extra-normal-ps: 16px,
+	extra-normal-ts: 12px,
 
 	snormal: 16px,
 	snormal-ps: 14px,
@@ -129,6 +136,10 @@ $block: (
 	height-img__box-service-ml: 136px,
 	height-img__box-service-mm: 100px,
 	height-img__box-service-ms: 80px,
+
+	height-img__require: 470px,
+	height-img__require-ps: 360px,
+	height-img__require-ts: 320px,
 );
 
 $size: (
