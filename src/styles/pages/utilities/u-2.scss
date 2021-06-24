@@ -1,0 +1,21 @@
+.utilities-size-content{
+  font-size: map-get($size, nav);
+  color: map-get($color, base);
+
+  p{
+    @include lineText;
+  }
+  br{
+    // margin-bottom: 42px !important;
+    content: "";
+    display: block;
+    @include spaceExtraMedium(margin-bottom);
+  }
+
+  img:not(:first-child){
+    // margin-top: 42px;
+    @include spaceExtraMedium(margin-top);
+  }
+
+  @include spaceUltraBig(margin-bottom);
+}

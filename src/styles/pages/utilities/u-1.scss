@@ -1,0 +1,41 @@
+.utilities-size{
+  // &__container{
+
+  // }
+  &-wrapper{
+    text-align: center;
+    @include spaceExtraBig(margin-bottom);
+  }
+  & .box{
+    &-introduct{
+      // &__title{
+      //   // display: block;
+      //   // width: 100%;
+      //   // height: 40px;
+      //   // background-color: map-get($color, primary);
+      //   // color: map-get($color, bg);
+      //   // font-size: map-get($size, nav);
+      //   // @include regular;
+
+      //   // display: flex;
+      //   // justify-content: center;
+      //   // align-items: center;
+      // }
+      &__img{
+        width: 100%;
+        height: 392px;
+      }
+      @include spaceuUltraNormal(margin-bottom);
+    }
+    @include spaceMedium(margin-bottom);
+    // &-details{
+
+    // }
+  }
+  .swiper-navigation__replace-numbers{
+    width: 148px;
+    margin: auto;
+  }
+
+  
+}

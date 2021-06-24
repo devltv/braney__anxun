@@ -586,6 +586,9 @@
 	flex-wrap: wrap;
 	margin-right: -12px;
 	margin-left: -12px;
+	&.between{
+		justify-content: space-between;
+	}
 }
 
 .no-gutters {
@@ -614,6 +617,27 @@
 	}
 }
 
+$tableColumn: (
+	1: 8.33333%, 
+	2: 16.66667%, 
+	3: 25%, 
+	4: 33.33333%,
+	5: 41.66667%,
+	6: 50%,
+	7: 58.33333%,
+	8: 66.66667%,
+	9: 75%,
+	10: 83.33333%,
+	11: 91.66667%,
+	12: 100%
+);
+
+@each $idx, $value in $tableColumn{
+	&.column-#{$idx}{
+		flex: 0 0 $value;
+		width: $value;
+	}
+}
 
 $flex: (
 	6: 16.66667,
@@ -623,6 +647,7 @@ $flex: (
 	2: 50%, 
 	1: 100%, 
 );
+
 
 @each $idx, $value in $flex {
   .table-column-#{$idx}{

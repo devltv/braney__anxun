@@ -1,0 +1,88 @@
+.navigation{
+  width: 100%;
+  display: block;
+  background-color: map-get($color, bg-input);
+
+  &-list{
+    display: flex;
+    flex-direction: column;
+    @include spaceSemiMedium(padding-top);
+    @include spaceSemiMedium(padding-bottom);
+    @include spaceNormal(padding-right);
+    @include spaceNormal(padding-left);
+  }
+
+  &-item + &-item{
+    @include spaceNormal(margin-top);
+  }
+
+  &-item{
+    background-color: map-get($color, bg);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include spaceExtraNormal(padding-right); 
+    @include spaceExtraNormal(padding-left); 
+
+    height: 72px;
+
+    &__title{
+      flex: 1;
+      @include spaceuUltraNormal(padding-right);
+      @include spaceuUltraNormal(padding-left);
+
+      color: map-get($color, headlines);
+
+      font-size: 18px;
+      &--size{
+        @include regular;
+      }
+    }
+
+    &__icon, &__arrow{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__icon{
+      svg{
+        path{
+          stroke: map-get($color, headlines);
+        }
+      }
+    }
+    &__arrow{
+      svg{
+        path{
+          stroke: map-get($color, primary);
+        }
+      }
+    }
+
+    &.active{
+      background-color: map-get($color, primary);
+      .navigation-item{
+        &__title{
+          color: map-get($color, bg);
+        }
+        &__icon{
+          svg{
+            path{
+              stroke: map-get($color, bg);
+            }
+          }
+        }
+        &__arrow{
+          svg{
+            path{
+              stroke: map-get($color, bg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.utilities-size-keyword{
+  @include spaceExtraBig(margin-bottom);
+  .key-words{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    margin: -4px;
+  
+    .word{
+      min-width: 64px;
+      height: 36px;
+      font-size: 24px;
+
+      color: map-get($color, bg);
+      background-color: map-get($color, primary);
+      @include bold;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,.16);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin: 4px;
+
+      &.active{
+        background-color: map-get($color, headlines);
+      }
+    }
+  }
+}
+
+
+.utilities-size-content__logistics{
+  p{
+    font-size: map-get($size, nav);
+    color: map-get($color, base);
+    @include lineText;
+  }
+  .utilities-logistics, h6{
+    font-size: map-get($size, nav);
+    @include bold;
+    color: map-get($color, headlines);
+  }
+
+  br{
+    content: "";
+    display: block;
+    @include spaceMedium(margin-bottom);
+  }
+
+  img:not(:first-child){
+    @include spaceMedium(margin-top);
+  }
+
+  @include spaceUltraBig(margin-bottom);
+
+  overflow-y: scroll;
+  max-height: 200vh;
+  padding: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+
+  &::-webkit-scrollbar-track
+  {
+    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  }
+  
+  &::-webkit-scrollbar
+  {
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+  
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: #AAA;
+    border-radius: 10px;
+    // background-image: -webkit-linear-gradient(90deg,
+    //                                           rgba(0, 0, 0, .2) 25%,
+    //                       transparent 25%,
+    //                       transparent 50%,
+    //                       rgba(0, 0, 0, .2) 50%,
+    //                       rgba(0, 0, 0, .2) 75%,
+    //                       transparent 75%,
+    //                       transparent)
+    background-image: url('../assets/images/utilities/scroll.png');
+  }
+}

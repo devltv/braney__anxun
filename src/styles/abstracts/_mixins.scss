@@ -331,6 +331,26 @@
 		}
 	}
 }
+@mixin spaceuUltraNormal($name, $value: -1px){
+	@if ($value != -1px){
+		#{$name}: map-get($space, ultra-normal) $value;
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, ultra-normal-ps) $value;
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, ultra-normal-ts) $value;
+		}
+	}
+	@else{
+		#{$name}: map-get($space, ultra-normal);
+		@media (max-width: map-get($media, ps)){
+			#{$name}: map-get($space, ultra-normal-ps);
+		}
+		@media (max-width: map-get($media, ts)){
+			#{$name}: map-get($space, ultra-normal-ts);
+		}
+	}
+}
 @mixin spaceExtraNormal($name, $value: -1px){
 	@if ($value != -1px){
 		#{$name}: map-get($space, extra-normal) $value;

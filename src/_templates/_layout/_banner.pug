@@ -1,5 +1,8 @@
 - var attributes = {};
-- attributes.src = imgBanner;
+if imgBanner
+  - attributes.src = imgBanner;
+if styleBanner
+  - attributes.style = styleBanner;
 
 section#banner
   .banner

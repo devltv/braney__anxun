@@ -11,6 +11,7 @@ import breadcrumb from "./layout/breadcrumb";
 
 // Page
 import index from "./page/index";
+import utilities from "./page/utilities";
 
 
 // function Layout
@@ -23,6 +24,7 @@ function layout(){
 // function Page
 function page(){
   index.index();
+  utilities.utilities();
 }
 
 document.addEventListener("DOMContentLoaded", async () => {

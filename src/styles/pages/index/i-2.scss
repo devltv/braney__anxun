@@ -41,7 +41,7 @@
       @include blockPath(padding);
       border-radius: 40px;
       box-shadow: 0 3px 6px rgba(0,0,0,.16);
-
+      height: 100%;
   
       &-content{
         &__title{
@@ -56,6 +56,9 @@
           &--size{
             @include sizeHeadlines-2;
             @include lineText;
+            @media (min-width: map-get($media, ps)) {
+              line-height: 34px;
+            }
             @include semi-bold;
             color: map-get($color, headlines);
             // line-height: 30px;
@@ -107,10 +110,10 @@
           &--src{
             object-fit: contain;
             object-position: center;
-            width: 100%;
-
-
+            // width: 100%;
             height: map-get($block, height-img__box-service);
+
+
             @media (max-width: map-get($media, pm)){
               height: map-get($block, height-img__box-service-pm);
             }
